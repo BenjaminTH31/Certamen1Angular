@@ -1,12 +1,21 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Cabecera } from './components/cabecera/cabecera';
+import { Menu } from './components/menu/menu';
+
+
 
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
-  styleUrl: './app.css',
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    Cabecera,
+    Menu
+  ],
   templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('conecta-estudiante');
+
 }
