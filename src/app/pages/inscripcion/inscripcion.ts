@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators
+} from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-inscripcion',
@@ -49,11 +56,8 @@ export class Inscripcion {
   enviar() {
 
     if (this.formulario.valid) {
-
       console.log(this.formulario.value);
-
       alert('Inscripción realizada correctamente');
-
       this.formulario.reset();
 
     } else {
@@ -61,7 +65,5 @@ export class Inscripcion {
       this.formulario.markAllAsTouched();
 
     }
-
   }
-
 }
