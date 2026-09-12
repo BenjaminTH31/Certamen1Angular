@@ -1,119 +1,136 @@
-<h2>Inscripción</h2>
+<section class="inscripcion">
+  <h2>Inscripción</h2>
 
-<form [formGroup]="formulario" (ngSubmit)="enviar()">
+  <div class="contenedor-formulario">
 
-  <label>Nombre</label>
-  <input type="text" formControlName="nombre">
-
-  @if (formulario.get('nombre')?.touched &&
-       formulario.get('nombre')?.invalid) {
-    <p class="error">
-      El nombre es obligatorio y debe tener mínimo 3 caracteres.
-    </p>
-  }
-
-
-  <label>Apellido</label>
-  <input type="text" formControlName="apellido">
-
-  @if (formulario.get('apellido')?.touched &&
-       formulario.get('apellido')?.invalid) {
-    <p class="error">
-      El apellido es obligatorio y debe tener mínimo 3 caracteres.
-    </p>
-  }
-
-
-  <label>Correo electrónico</label>
-  <input type="email" formControlName="correo">
-
-  @if (formulario.get('correo')?.touched &&
-       formulario.get('correo')?.invalid) {
-    <p class="error">
-      Ingrese un correo electrónico válido.
-    </p>
-  }
-
-
-  <label>Carrera o programa</label>
-  <input type="text" formControlName="carrera">
-
-  @if (formulario.get('carrera')?.touched &&
-       formulario.get('carrera')?.invalid) {
-    <p class="error">
-      La carrera es obligatoria.
-    </p>
-  }
-
-
-  <label>Actividad</label>
-
-  <select formControlName="actividad">
-
-    <option value="">Seleccione una actividad</option>
-
-    <option value="programacion">
-      Taller de programación
-    </option>
-    <option value="angular">
-      Angular
-    </option>
-
-    <option value="base de datos">
-      Base de datos
-    </option>
-    <option value="poo">
-      Programacion orientada a objetos
-    </option>
-
-  </select>
-
-
-  @if (formulario.get('actividad')?.touched &&
-       formulario.get('actividad')?.invalid) {
-
-    <p class="error">
-      Debe seleccionar una actividad.
-    </p>
-  }
-
-
-  <label>Jornada</label>
-  <select formControlName="jornada">
-
-    <option value="">Seleccione una jornada</option>
-
-    <option value="manana">
-      Mañana
-    </option>
-
-    <option value="tarde">
-      Tarde
-    </option>
-
-    <option value="vespertina">
-      Vespertina
-    </option>
-
-  </select>
-
-
-
-  @if (formulario.get('jornada')?.touched &&
-       formulario.get('jornada')?.invalid) {
-
-    <p class="error">
-      Debe seleccionar una jornada.
+    <p class="introduccion">
+      Completa el siguiente formulario para participar en una actividad.
     </p>
 
-  }
+    <form [formGroup]="formulario" (ngSubmit)="enviar()">
+
+      <div class="campo">
+        <label>Nombre</label>
+        <input type="text" formControlName="nombre">
+
+        @if (formulario.get('nombre')?.touched &&
+             formulario.get('nombre')?.invalid) {
+          <p class="error">
+            El nombre es obligatorio y debe tener mínimo 3 caracteres.
+          </p>
+        }
+      </div>
 
 
-  <label>Comentario</label>
-  <textarea formControlName="comentario"></textarea>
+      <div class="campo">
+        <label>Apellido</label>
+        <input type="text" formControlName="apellido">
 
-  <button type="submit">
-    Inscribirse
-  </button>
+        @if (formulario.get('apellido')?.touched &&
+             formulario.get('apellido')?.invalid) {
+          <p class="error">
+            El apellido es obligatorio y debe tener mínimo 3 caracteres.
+          </p>
+        }
+      </div>
 
-</form>
+
+      <div class="campo">
+        <label>Correo electrónico</label>
+        <input type="email" formControlName="correo">
+
+        @if (formulario.get('correo')?.touched &&
+             formulario.get('correo')?.invalid) {
+          <p class="error">
+            Ingrese un correo electrónico válido.
+          </p>
+        }
+      </div>
+
+
+      <div class="campo">
+        <label>Carrera o programa</label>
+        <input type="text" formControlName="carrera">
+
+        @if (formulario.get('carrera')?.touched &&
+             formulario.get('carrera')?.invalid) {
+          <p class="error">
+            La carrera es obligatoria.
+          </p>
+        }
+      </div>
+
+
+      <div class="campo">
+        <label>Actividad</label>
+
+        <select formControlName="actividad">
+          <option value="">Seleccione una actividad</option>
+
+          <option value="programacion">
+            Taller de programación
+          </option>
+
+          <option value="angular">
+            Angular
+          </option>
+
+          <option value="base de datos">
+            Base de datos
+          </option>
+
+          <option value="poo">
+            Programación orientada a objetos
+          </option>
+        </select>
+
+        @if (formulario.get('actividad')?.touched &&
+             formulario.get('actividad')?.invalid) {
+          <p class="error">
+            Debe seleccionar una actividad.
+          </p>
+        }
+      </div>
+
+
+      <div class="campo">
+        <label>Jornada</label>
+
+        <select formControlName="jornada">
+          <option value="">Seleccione una jornada</option>
+
+          <option value="manana">
+            Mañana
+          </option>
+
+          <option value="tarde">
+            Tarde
+          </option>
+
+          <option value="vespertina">
+            Vespertina
+          </option>
+        </select>
+
+        @if (formulario.get('jornada')?.touched &&
+             formulario.get('jornada')?.invalid) {
+          <p class="error">
+            Debe seleccionar una jornada.
+          </p>
+        }
+      </div>
+
+
+      <div class="campo">
+        <label>Comentario</label>
+        <textarea formControlName="comentario"></textarea>
+      </div>
+
+
+      <button type="submit">
+        Inscribirse
+      </button>
+
+    </form>
+  </div>
+</section>

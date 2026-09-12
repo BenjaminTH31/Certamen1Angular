@@ -1,0 +1,22 @@
+.cabecera {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.contenedor-cabecera {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cabecera h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.cabecera p {
+  margin: 10px 0 0;
+  font-size: 16px;
+}

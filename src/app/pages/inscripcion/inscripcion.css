@@ -1,31 +1,76 @@
+.contenedor-formulario {
+  background-color: white;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-top: 4px solid #2e7d32;
+  border-radius: 6px;
+}
+
+.introduccion {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
 form {
-  max-width: 600px;
-  margin: 30px auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 18px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-weight: bold;
+  color: #2e7d32;
 }
 
 input,
 select,
 textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #bbb;
   border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2e7d32;
 }
 
 textarea {
   min-height: 100px;
+  resize: vertical;
 }
 
 button {
+  background-color: #2e7d32;
+  color: white;
   padding: 12px;
   border: none;
   border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #1b5e20;
+}
+
 .error {
-  margin: 0;
+  color: #c62828;
   font-size: 14px;
+  margin: 0;
 }
